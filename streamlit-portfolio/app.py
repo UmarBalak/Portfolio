@@ -254,23 +254,44 @@ with proj:
 
 st.markdown("""
     <style>
+    /* Style the expander's button text */
+    [data-baseweb="collapse"] .st-bv {
+        font-size: 18px !important;
+        font-weight: bold !important;
+        color: #4B8BBE !important;
+        background-color: #f0f2f6 !important;
+        padding: 10px !important;
+        border-radius: 5px !important;
+    }
+    /* Optional: add hover effects to make it more interactive */
+    [data-baseweb="collapse"] .st-bv:hover {
+        background-color: #e0e6f0 !important;
+        color: #333 !important;
+    }
     .right {
         float: right;
         color: #999;
         font-weight: bold;
     }
-    .section-header {
-        font-size: 22px;
+    .section-header{
+        font-size: 24px;
         font-weight: bold;
         color: #4B8BBE;
+    }
+    .section-sub-header {
+        font-size: 18px;
+        font-weight: bold;
+        # color: #4B8BBE;
+        color: black;
         margin-bottom: 10px;
-        border-bottom: 2px solid #4B8BBE;
+        border-bottom: 1px solid #4B8BBE;
         padding-bottom: 5px;
     }
     .skills-header {
         font-size: 18px;
         font-weight: bold;
-        color: #4B8BBE;
+        # color: #4B8BBE;
+        color: black;
         margin-bottom: 10px;
         border-bottom: 1px solid #4B8BBE;
         padding-bottom: 5px;
@@ -291,35 +312,38 @@ st.markdown("""
 with resume:
     st.markdown('<h1 style="background-color:#4B8BBE;color:white;padding:10px;text-align:center;border-radius:10px;">Resume</h1>', unsafe_allow_html=True)
     st.write('')
+
     # Education Section
-    with st.expander("🎓 Education", expanded=True):
-        st.markdown('<div class="section-header">Saraswati College Of Engineering</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">Education</div>', unsafe_allow_html=True)
+    with st.expander("Show/Hide", expanded=True):
+        st.markdown('<div class="section-sub-header">Saraswati College Of Engineering</div>', unsafe_allow_html=True)
         st.write("Bachelor of Engineering in Computer Science And Engineering (AIML) with **8.64 CGPA**")
         st.markdown('<div class="right">Navi Mumbai, India | 2021 – 2025</div>', unsafe_allow_html=True)
 
-        st.markdown('<div class="section-header">Anjuman-E-Islam Janjira Jr. College of Science and Arts</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-sub-header">Anjuman-E-Islam Janjira Jr. College of Science and Arts</div>', unsafe_allow_html=True)
         st.write("*Class XII with 92.50%*")
         st.markdown('<div class="right">Murud, Maharashtra | 2019 – 2021</div>', unsafe_allow_html=True)
-        st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
 
     # Skills Section with Progress Bars
-    with st.expander("🛠️ Skills", expanded=True):
+    st.markdown('<div class="section-header">Skills</div>', unsafe_allow_html=True)
+    with st.expander("Show/Hide", expanded=True):
         st.markdown('<div class="skills-header">Programming Languages</div>', unsafe_allow_html=True)
-        st.write("**Python, SQL**")
+        st.write("Python, SQL")
 
         st.markdown('<div class="skills-header">Libraries / Frameworks</div>', unsafe_allow_html=True)
-        st.write("**TensorFlow, Keras, Scikit-Learn, NumPy, Pandas, Streamlit**")
+        st.write("TensorFlow, Keras, Scikit-Learn, NumPy, Pandas, Streamlit")
 
         st.markdown('<div class="skills-header">Tools / Platforms</div>', unsafe_allow_html=True)
-        st.write("**Jupyter Notebook, Google Colab, VS Code, Power BI, Git, GitHub**")
+        st.write("Jupyter Notebook, Google Colab, VS Code, Power BI, Git, GitHub")
 
         st.markdown('<div class="skills-header">Databases</div>', unsafe_allow_html=True)
-        st.write("**MySQL**")
+        st.write("MySQL**")
 
 
     # Projects Section with Icons and Better Formatting
-    with st.expander("🚀 Projects", expanded=True):
-        st.markdown('<div class="section-header">AI-driven Proctored Exam System</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">Projects</div>', unsafe_allow_html=True)
+    with st.expander("Show/Hide", expanded=True):
+        st.markdown('<div class="section-sub-header">AI-driven Proctored Exam System</div>', unsafe_allow_html=True)
         st.write("""
         - A comprehensive system for proctored exams, utilizing advanced AI technologies for real-time monitoring.
         - **Implemented YOLOv8** for background monitoring to detect unauthorized individuals, significantly reducing cheating incidents.
@@ -327,42 +351,44 @@ with resume:
         - **Technologies:** YOLOv8, OpenCV, MediaPipe.
         """)
         
-        st.markdown('<div class="section-header">TinyVGG: Image Classification Model Inspired by VGG16</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-sub-header">TinyVGG: Image Classification Model Inspired by VGG16</div>', unsafe_allow_html=True)
         st.write("""
         - An optimized image classification model based on the **VGG16 architecture**, designed for efficiency.
         - Trained the model on the **CIFAR-10 dataset**, achieving a classification accuracy of **92%** with a model size of **4MB**.
         - **Technologies:** TensorFlow, Keras, CNN.
         """)
 
-        st.markdown('<div class="section-header">CineMate: Movie Recommendation System</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-sub-header">CineMate: Movie Recommendation System</div>', unsafe_allow_html=True)
         st.write("""
         - Created with **K-Nearest Neighbors** and **TF-IDF** to deliver the **top 10 personalized** movie picks.
         - Includes **8,000 top Netflix movies** and **75,000 top TMDB movies**.
         - **Technologies:** KNN, TF-IDF.
         """)
         
-        st.markdown('<div class="section-header">MoodMap: Sentiment Analysis Tool</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-sub-header">MoodMap: Sentiment Analysis Tool</div>', unsafe_allow_html=True)
         st.write("""
         - **Logistic Regression** and **TF-IDF** vectorization used for sentiment categorization.
         - Analyzed over **50,000 movie reviews**, achieving **90% accuracy**.
         """)
 
     # Experience Section with Date Formatting
-    with st.expander("🏅 Experience", expanded=True):
-        st.markdown('<div class="section-header">Quasar 2.0 Hackathon - 1st Prize Winner</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">Experience</div>', unsafe_allow_html=True)
+    with st.expander("Show/Hide", expanded=True):
+        st.markdown('<div class="section-sub-header">Quasar 2.0 Hackathon - 1st Prize Winner</div>', unsafe_allow_html=True)
         st.write("""
         - Developed AI-driven Proctored Exam System using **YOLOv8** for unauthorized person detection, with **OpenCV** and **MediaPipe** for eye gaze and head tracking.
         """)
         st.markdown('<div class="right">March 2024</div>', unsafe_allow_html=True)
 
-        st.markdown('<div class="section-header">NASA Space App Challenge - 1st Prize Winner</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-sub-header">NASA Space App Challenge - 1st Prize Winner</div>', unsafe_allow_html=True)
         st.write("""
         - Created an intelligent project collaboration system with a recommendation engine powered by machine learning.
         """)
         st.markdown('<div class="right">October 2023</div>', unsafe_allow_html=True)
 
     # Certifications Section with Icons
-    with st.expander("🎓 Certifications", expanded=True):
-        st.markdown('<div class="section-header">Microsoft Azure AI-900 - Microsoft</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">Certifications</div>', unsafe_allow_html=True)
+    with st.expander("Show/Hide", expanded=True):
+        st.markdown('<div class="section-sub-header">Microsoft Azure AI-900 - Microsoft</div>', unsafe_allow_html=True)
         st.write("Certified in **March 2023**")
         st.markdown('<div class="right">March 2023</div>', unsafe_allow_html=True)
