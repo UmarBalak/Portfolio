@@ -10,60 +10,112 @@ from plotly.subplots import make_subplots
 
 ### METADATA
 st.set_page_config(
-    page_title="Umar A. Balak | Portfolio",
+    page_title="Umar Balak | Portfolio",
     page_icon="📈",
     layout="wide",
 )
 
 ### SIDEBAR
-# st.sidebar.markdown('<div style="text-align: left; margin-bottom: 12px"><a href="https://guerreiro.streamlit.app/">''<img src="https://i.imgur.com/t3cH48K.png" alt="Name" width="250">'
-#     '</a></div>', unsafe_allow_html=True)
+
+st.markdown(
+    """
+    <style>
+    /* Justify text for about me */
+    .justified-text {
+        text-align: justify;
+        margin: 0 15px; /* Adjust the margins for better readability */
+    }
+    .sidebar-button {
+        margin: 20px 0 0 0;
+        display: flex;
+        justify-content: center;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.sidebar.markdown(
     """
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap'); /* Replace with the Whisper font link */
 
     .custom-font {
-        font-family: 'Whisper', sans-serif; /* Apply Whisper font */
-        font-size: 36px;
-        text-align: left;
+        font-family: 'Whisper', sans-serif; 
+        font-size: 48px;
+        text-align: center;
         margin-bottom: 12px;
-        color: black; /* Adjust color if needed */
+        color: black; 
     }
     </style>
     
     <div class="custom-font">
-        Umar A. Balak
+        Harry J. Potter
     </div>
     """,
     unsafe_allow_html=True
 )
-st.sidebar.markdown("##### A personal portfolio project © 2024.")
 st.sidebar.caption(
-    "I am a final-year B.Tech CSE student specializing in AI/ML with a strong academic record. "
-    "My passion for technology led me to develop innovative projects such as an AI Proctor system and a TinyVGG-based image classification model. "
-    "With a CGPA of 9.65 and several hackathon wins, including 1st prize in the NASA Space App Challenge, I have honed my skills in Python, TensorFlow, and machine learning. "
-    "I thrive on solving real-world problems through code and am always exploring new challenges. ")
+    '''
+    <div class="justified-text">
+    I am a final-year B.Tech CSE student specializing in AI/ML with a strong academic record.
+    My passion for technology led me to develop innovative projects such as an AI Proctor system and an Image classification model.
+    With a CGPA of 9.65 and several hackathon wins, including 1st prize in the NASA Space App Challenge, I have honed my skills in Python, TensorFlow, and machine learning.
+    I thrive on solving real-world problems through code and am always exploring new challenges.
+    </div>
+    ''',
+    unsafe_allow_html=True
+    )
     
 # Create 4 columns for the logos with reduced spacing
 c1, c2, gmail, github, linkedin, c4, c5= st.sidebar.columns(7)
+# Gmail button
+gmail.markdown(
+    """
+    <div class="sidebar-button">
+        <a href="mailto:hv@gmail.com" target="_blank" class="button">
+            <img src="https://lh3.googleusercontent.com/0rpHlrX8IG77awQMuUZpQ0zGWT7HRYtpncsuRnFo6V3c8Lh2hPjXnEuhDDd-OsLz1vua4ld2rlUYFAaBYk-rZCODmi2eJlwUEVsZgg" alt="Gmail" width="25" height="25">
+        </a>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
 
-# Add clickable logos side by side for Gmail, Google Scholar, Github, and Linkedin with reduced spacing
-gmail.markdown('<div style="text-align: left"><a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=guerreiro.bms@gmail.com&su=New%20job%20opportunity%20for%20Bruno%20M.%20Guerreiro" target="_blank">'
-    '<img src="https://lh3.googleusercontent.com/0rpHlrX8IG77awQMuUZpQ0zGWT7HRYtpncsuRnFo6V3c8Lh2hPjXnEuhDDd-OsLz1vua4ld2rlUYFAaBYk-rZCODmi2eJlwUEVsZgg" alt="Gmail" width="32" height="32">'
-    '</a></div>', unsafe_allow_html=True)
-github.markdown('<div style="text-align: left"><a href="https://github.com/cryobiochem" target="_blank">'
-    '<img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github" width="32" height="32">'
-    '</a></div>', unsafe_allow_html=True)
-linkedin.markdown('<div style="text-align: left"><a href="https://www.linkedin.com/in/bmguerreiro/" target="_blank">'
-    '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn" width="32" height="32">'
-    '</a></div>', unsafe_allow_html=True)
+# GitHub button
+github.markdown(
+    """
+    <div class="sidebar-button">
+        <a href="https://github.com/cryobiochem" target="_blank" class="button">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="25" height="25">
+        </a>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
 
-st.sidebar.write('')
+# LinkedIn button
+linkedin.markdown(
+    """
+    <div class="sidebar-button">
+        <a href="https://www.linkedin.com/in/bmguerreiro/" target="_blank" class="button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn" width="25" height="25">
+        </a>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
+
+st.sidebar.write('---')
 
 # Resume/CV download button
-st.sidebar.markdown(f'<a href="https://pouch.jumpshare.com/download/vP2xyACw55AUc-mr9IdBV0s2oNr9koOjYp5Wig6F4O_dhDGJS_bpYbGOeQIzCkLCQSWYV-nC3-IH4CkRIJWpzA" download="Resume_CV.pdf"><button style="cursor: pointer; padding: 10px; border: none; border-radius: 5px;">Download CV</button></a>', unsafe_allow_html=True)
-st.sidebar.caption("📌 Based in Mumbai/India")
+st.sidebar.markdown(
+    """
+    <div style="text-align: center; font-size: 12px;">
+        A personal portfolio project © 2024.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 ### CONTENT
 aboutme, certs, proj, resume = st.tabs(["About me",
