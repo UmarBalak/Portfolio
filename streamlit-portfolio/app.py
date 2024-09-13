@@ -16,8 +16,28 @@ st.set_page_config(
 )
 
 ### SIDEBAR
-st.sidebar.markdown('<div style="text-align: left; margin-bottom: 12px"><a href="https://guerreiro.streamlit.app/">''<img src="https://i.imgur.com/t3cH48K.png" alt="Name" width="250">'
-    '</a></div>', unsafe_allow_html=True)
+# st.sidebar.markdown('<div style="text-align: left; margin-bottom: 12px"><a href="https://guerreiro.streamlit.app/">''<img src="https://i.imgur.com/t3cH48K.png" alt="Name" width="250">'
+#     '</a></div>', unsafe_allow_html=True)
+st.sidebar.markdown(
+    """
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap'); /* Replace with the Whisper font link */
+
+    .custom-font {
+        font-family: 'Whisper', sans-serif; /* Apply Whisper font */
+        font-size: 36px;
+        text-align: left;
+        margin-bottom: 12px;
+        color: black; /* Adjust color if needed */
+    }
+    </style>
+    
+    <div class="custom-font">
+        Umar A. Balak
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 st.sidebar.markdown("##### A personal portfolio project © 2024.")
 st.sidebar.caption(
     "I am a final-year B.Tech CSE student specializing in AI/ML with a strong academic record. "
