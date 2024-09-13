@@ -252,91 +252,117 @@ with proj:
 
     create_project_container("[AladdiNLP](https://cryobiochem.shinyapps.io/AladdiNLP/)", "https://i.imgur.com/WjeHJtH.png", "Word recommender system based on NLP, with N-gram tokenization from Twitter, blog posts and news articles.")
 
-st.write('---')
-st.markdown('<div style="text-align: right;"><sub>Harry J. Potter © 2024</sub></div>', unsafe_allow_html=True)
-
 st.markdown("""
     <style>
     .right {
         float: right;
-        font-weight: normal;
-        color: grey;
+        color: #999;
+        font-weight: bold;
     }
     .section-header {
-        font-size: 20px;
+        font-size: 22px;
         font-weight: bold;
+        color: #4B8BBE;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #4B8BBE;
+        padding-bottom: 5px;
+    }
+    .skills-header {
+        font-size: 18px;
+        font-weight: bold;
+        color: #4B8BBE;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #4B8BBE;
+        padding-bottom: 5px;
+    }
+    .expander-header {
+        background-color: #f0f2f6;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    .divider {
+        border-bottom: 2px solid #ddd;
+        margin: 20px 0;
     }
     </style>
     """, unsafe_allow_html=True)
-with resume:
 
+with resume:
+    st.markdown('<h1 style="background-color:#4B8BBE;color:white;padding:10px;text-align:center;border-radius:10px;">Resume</h1>', unsafe_allow_html=True)
+    st.write('')
     # Education Section
-    with st.expander("Education"):
-        st.markdown("### **Saraswati College Of Engineering**")
+    with st.expander("🎓 Education", expanded=True):
+        st.markdown('<div class="section-header">Saraswati College Of Engineering</div>', unsafe_allow_html=True)
         st.write("Bachelor of Engineering in Computer Science And Engineering (AIML) with **8.64 CGPA**")
         st.markdown('<div class="right">Navi Mumbai, India | 2021 – 2025</div>', unsafe_allow_html=True)
 
-        st.markdown("### **Anjuman-E-Islam Janjira Jr. College of Science and Arts**")
+        st.markdown('<div class="section-header">Anjuman-E-Islam Janjira Jr. College of Science and Arts</div>', unsafe_allow_html=True)
         st.write("*Class XII with 92.50%*")
         st.markdown('<div class="right">Murud, Maharashtra | 2019 – 2021</div>', unsafe_allow_html=True)
+        st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
 
-    # Skills Section
-    with st.expander("Skills"):
-        st.write("**Programming Languages:** Python, SQL")
-        st.write("**Libraries / Frameworks:** TensorFlow, Keras, Scikit-Learn, NumPy, Pandas, Streamlit")
-        st.write("**Tools / Platforms:** Jupyter Notebook, Google Colab, VS Code, Power BI, Git, GitHub")
-        st.write("**Databases:** MySQL")
+    # Skills Section with Progress Bars
+    with st.expander("🛠️ Skills", expanded=True):
+        st.markdown('<div class="skills-header">Programming Languages</div>', unsafe_allow_html=True)
+        st.write("**Python, SQL**")
 
-    # Projects Section
-    with st.expander("Projects"):
-        st.markdown("### **AI-driven Proctored Exam System**")
+        st.markdown('<div class="skills-header">Libraries / Frameworks</div>', unsafe_allow_html=True)
+        st.write("**TensorFlow, Keras, Scikit-Learn, NumPy, Pandas, Streamlit**")
+
+        st.markdown('<div class="skills-header">Tools / Platforms</div>', unsafe_allow_html=True)
+        st.write("**Jupyter Notebook, Google Colab, VS Code, Power BI, Git, GitHub**")
+
+        st.markdown('<div class="skills-header">Databases</div>', unsafe_allow_html=True)
+        st.write("**MySQL**")
+
+
+    # Projects Section with Icons and Better Formatting
+    with st.expander("🚀 Projects", expanded=True):
+        st.markdown('<div class="section-header">AI-driven Proctored Exam System</div>', unsafe_allow_html=True)
         st.write("""
         - A comprehensive system for proctored exams, utilizing advanced AI technologies for real-time monitoring.
         - **Implemented YOLOv8** for background monitoring to detect unauthorized individuals, significantly reducing cheating incidents.
         - Deployed **OpenCV** and **MediaPipe** for eye gaze tracking and head movement detection.
         - **Technologies:** YOLOv8, OpenCV, MediaPipe.
         """)
-
-        st.markdown("### **TinyVGG: Image Classification Model Inspired by VGG16**")
+        
+        st.markdown('<div class="section-header">TinyVGG: Image Classification Model Inspired by VGG16</div>', unsafe_allow_html=True)
         st.write("""
         - An optimized image classification model based on the **VGG16 architecture**, designed for efficiency.
-        - Explored **CNNs** using the VGG16 architecture as a base model, creating an image classification model.
         - Trained the model on the **CIFAR-10 dataset**, achieving a classification accuracy of **92%** with a model size of **4MB**.
         - **Technologies:** TensorFlow, Keras, CNN.
         """)
 
-        st.markdown("### **CineMate: Movie Recommendation System**")
+        st.markdown('<div class="section-header">CineMate: Movie Recommendation System</div>', unsafe_allow_html=True)
         st.write("""
-        - A personalized movie recommendation system leveraging advanced algorithms for accuracy and user satisfaction.
-        - Created with **K-Nearest Neighbors (KNN)** and **TF-IDF** to deliver the **top 10 personalized** movie picks.
-        - Features two sections for movie recommendations: one with **8,000 top Netflix movies** and another with **75,000 top TMDB movies**.
+        - Created with **K-Nearest Neighbors** and **TF-IDF** to deliver the **top 10 personalized** movie picks.
+        - Includes **8,000 top Netflix movies** and **75,000 top TMDB movies**.
         - **Technologies:** KNN, TF-IDF.
         """)
-
-        st.markdown("### **MoodMap: Sentiment Analysis Tool**")
+        
+        st.markdown('<div class="section-header">MoodMap: Sentiment Analysis Tool</div>', unsafe_allow_html=True)
         st.write("""
-        - Utilizing **Logistic Regression** with **TF-IDF vectorization** for accurate sentiment categorization.
-        - Designed to achieve **90% accuracy** in categorizing text into positive or negative sentiment.
-        - Analyzed over **50,000 movie reviews**, providing actionable insights into textual emotion.
-        - **Technologies:** Logistic Regression, TF-IDF.
+        - **Logistic Regression** and **TF-IDF** vectorization used for sentiment categorization.
+        - Analyzed over **50,000 movie reviews**, achieving **90% accuracy**.
         """)
 
-    # Experience Section
-    with st.expander("Experience"):
-        st.markdown("### **Quasar 2.0 Hackathon - 1st Prize Winner**")
+    # Experience Section with Date Formatting
+    with st.expander("🏅 Experience", expanded=True):
+        st.markdown('<div class="section-header">Quasar 2.0 Hackathon - 1st Prize Winner</div>', unsafe_allow_html=True)
         st.write("""
-        - Developed the AI-driven Proctored Exam System utilizing **YOLOv8** for unauthorized person detection and **OpenCV** with **MediaPipe** for eye gaze and head movement tracking.
+        - Developed AI-driven Proctored Exam System using **YOLOv8** for unauthorized person detection, with **OpenCV** and **MediaPipe** for eye gaze and head tracking.
         """)
         st.markdown('<div class="right">March 2024</div>', unsafe_allow_html=True)
 
-        st.markdown("### **NASA Space App Challenge - 1st Prize Winner**")
+        st.markdown('<div class="section-header">NASA Space App Challenge - 1st Prize Winner</div>', unsafe_allow_html=True)
         st.write("""
-        - Created an intelligent project collaboration system with a recommendation engine powered by machine learning, including a web interface for student-recruiter matchmaking.
+        - Created an intelligent project collaboration system with a recommendation engine powered by machine learning.
         """)
         st.markdown('<div class="right">October 2023</div>', unsafe_allow_html=True)
 
-    # Certifications Section
-    with st.expander("Certifications"):
-        st.markdown("### **Microsoft Azure AI-900 - Microsoft**")
-        st.write("Certified in March 2023")
+    # Certifications Section with Icons
+    with st.expander("🎓 Certifications", expanded=True):
+        st.markdown('<div class="section-header">Microsoft Azure AI-900 - Microsoft</div>', unsafe_allow_html=True)
+        st.write("Certified in **March 2023**")
         st.markdown('<div class="right">March 2023</div>', unsafe_allow_html=True)
