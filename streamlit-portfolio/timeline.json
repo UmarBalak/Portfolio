@@ -53,8 +53,8 @@
     },
     {
       "media": {
-          "url": "https://example.com/image_of_hackathon2.jpg",
-          "caption": "Henry Vu at the NASA Space App Challenge."
+          "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/nasa.jpg",
+          "caption": ""
       },
       "start_date": {
           "year": "2023",
@@ -67,8 +67,8 @@
   },
     {
         "media": {
-            "url": "https://example.com/image_of_hackathon1.jpg",
-            "caption": "Henry Vu at the Quasar 2.0 Hackathon."
+            "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/quasar.jpg",
+            "caption": ""
         },
         "start_date": {
             "year": "2024",
