@@ -2,7 +2,7 @@
 {
     "title": {
         "media": {
-          "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/signature.png",
+          "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/about-pic.jpg",
           "caption": ""
         },
         "text": {
@@ -13,51 +13,71 @@
 
     },
     "events": [
-      {
-        "media": {
-          "url": "https://github.com/UmarBalak/Portfolio/blob/main/streamlit-portfolio/assets/images/signature.png",
-          "caption": "The Setubal Peninsula, just south of Lisbon."
-        },
+    {
         "start_date": {
-          "year": "1995",
-          "month": "1",
-          "day": 8
+            "year": "2019",
+            "month": "5"
         },
         "text": {
-          "headline": "Bruno M. Guerreiro",
-          "text": "<p>was born in Setubal, Portugal. When he was 10 and asked about his future profession, he wanted to <i>'know things no one has discovered yet'</i>.</p>"
+            "headline": "Scored 88.40% in 10th grade",
+            "text": "<p>Studied in Anjuman Islam Janjira High School for class 10th and scored 88.40% in Maharashtra Board Examination.</p>"
         }
-      },
-      {
+    },
+    {
+        "start_date": {
+            "year": "2021",
+            "month": "5"
+        },
+        "text": {
+            "headline": "12th Science with PCMB",
+            "text": "<p>Studied in Anjuman Islam Janjira Jr. College for class 12th and scored 92.50%</p>"
+        }
+    },
+    {
         "media": {
-          "url": "https://i.imgur.com/Abf0p7T.png",
-          "caption": "Attending one of the weekly discourses with the NOVA Debate team. The topic was gender equality in sports."
+            "url": "https://example.com/image_of_BE_graduation.jpg",
+            "caption": "Henry Vu's BE Graduation."
         },
         "start_date": {
-          "year": "2023",
-          "month": "3"
+            "year": "2021",
+            "month": "6"
         },
         "end_date": {
-          "year": "2023",
-          "month": "9"
+            "year": "2025",
+            "month": "6"
         },
         "text": {
-          "headline": "NOVA Debate<br>Content Coordinator",
-          "text": "<p>Bruno also enrolled the NOVA Debate student nucleus, in pursuit of further intellectual prowess. He played a content coordinator and curator role for several debating sessions after his PhD work, refining his public speaking, managing, mentoring and conflict resolution skills.</p>"
+            "headline": "Saraswati College Of Engineering, Kharghar",
+            "text": "<p>Started pursuing Bachelors of engineering in CSE with specialization Artificial Intelligence and Machine Learning.</p>"
         }
+    },
+    {
+      "media": {
+          "url": "https://example.com/image_of_hackathon2.jpg",
+          "caption": "Henry Vu at the NASA Space App Challenge."
       },
-      {
+      "start_date": {
+          "year": "2023",
+          "month": "10"
+      },
+      "text": {
+        "headline": "Participated in NASA Space App Challenge",
+        "text": "<p>Gained valuable experience by developing an intelligent project collaboration system, applying skills in machine learning and web development.</p>"
+    }
+  },
+    {
         "media": {
-          "url": "https://i.imgur.com/aHfy29I.jpg"
+            "url": "https://example.com/image_of_hackathon1.jpg",
+            "caption": "Henry Vu at the Quasar 2.0 Hackathon."
         },
         "start_date": {
-          "year": "2023",
-          "month": "8"
+            "year": "2024",
+            "month": "3"
         },
         "text": {
-          "headline": "Media Exposure",
-          "text": "<p>Bruno's milestones eventually caught up to him. Bruno was interviewed for <b>Jornal Expresso</b> and his work was featured in print. Also, his work in Berkeley featured in a special issue of <b>Forbes</b> focusing on cryopreservation as futuristic medical tech. He was also invited to the Unexpected Data podcast to share his efforts in bridging cryopreservation with data science.</p>"
+            "headline": "1st Prize - Quasar 2.0 Hackathon",
+            "text": "<p>Developed an innovative AI Proctored Exam System that excelled in real-time monitoring and cheating detection, securing 1st place.</p>"
         }
-      }
+    }
     ]
 }
