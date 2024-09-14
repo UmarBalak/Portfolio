@@ -35,8 +35,8 @@
     },
     {
         "media": {
-            "url": "https://example.com/image_of_BE_graduation.jpg",
-            "caption": "Henry Vu's BE Graduation."
+            "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/scoe.jpg",
+            "caption": ""
         },
         "start_date": {
             "year": "2021",
