@@ -172,7 +172,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.sidebar.markdown("<br><br><br><br><br>", unsafe_allow_html=True)
+st.sidebar.markdown("<br><br>", unsafe_allow_html=True)
 st.sidebar.markdown(
     """
     <style>
@@ -180,7 +180,7 @@ st.sidebar.markdown(
 
     .custom-font {
         font-family: 'Whisper', sans-serif; 
-        font-size: 52px;
+        font-size: 46px;
         text-align: center;
         margin-bottom: 12px;
         color: black; 
