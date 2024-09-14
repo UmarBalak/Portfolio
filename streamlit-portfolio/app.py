@@ -310,7 +310,7 @@ if page == "About Me":
                         },
                         {
                         "media": {
-                            "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/nasa.jpg",
+                            "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/azure-certificate.png",
                             "caption": ""
                         },
                         "start_date": {
