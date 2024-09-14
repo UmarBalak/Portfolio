@@ -343,7 +343,7 @@ if page == "About Me":
     c1, c2, c3 = st.columns([1, 25, 1])
     with c2:
         st.header("Career Snapshot")
-        timeline(data, height=600)
+        timeline(data, height=400)
 
     st.write("---")
 
