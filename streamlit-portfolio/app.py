@@ -309,6 +309,16 @@ if page == "About Me":
                             }
                         },
                         {
+                            "start_date": {
+                                "year": "2022",
+                                "month": "6"
+                            },
+                            "text": {
+                                "headline": "First Year CGPA: 7.85",
+                                "text": "<p>Successfully completed my first year in CSE, achieving a CGPA of 7.85.</p>"
+                            }
+                        },
+                        {
                         "media": {
                             "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/azure-certificate.png",
                             "caption": ""
@@ -322,6 +332,16 @@ if page == "About Me":
                             "text": "<p>Demonstrated expertise in foundational knowledge of AI and Machine Learning concepts using Microsoft Azure AI services.</p>"
                         }
                     },
+                    {
+                            "start_date": {
+                                "year": "2023",
+                                "month": "6"
+                            },
+                            "text": {
+                                "headline": "Second Year CGPA: 8.63",
+                                "text": "<p>Improved my performance in the second year, bringing my CGPA up to 8.63.</p>"
+                            }
+                        },
                         {
                         "media": {
                             "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/nasa.jpg",
@@ -348,6 +368,26 @@ if page == "About Me":
                             "text": {
                                 "headline": "1st Prize - Quasar 2.0 Hackathon",
                                 "text": "<p>Developed an innovative AI Proctored Exam System that excelled in real-time monitoring and cheating detection, securing 1st place.</p>"
+                            }
+                        },
+                        {
+                            "start_date": {
+                                "year": "2024",
+                                "month": "6"
+                            },
+                            "text": {
+                                "headline": "Third Year CGPA: 9.65",
+                                "text": "<p>Completed the third year with consistent progress, achieving a CGPA of 9.65, showing my continuous improvement.</p>"
+                            }
+                        },
+                        {
+                            "start_date": {
+                                "year": "2024",
+                                "month": "9"
+                            },
+                            "text": {
+                                "headline": "Onwards and Upwards: Shaping the Future with AI",
+                                "text": "<p>Currently working on complex AI projects, focusing on making impactful innovations in federated learning, real-time video processing, and intelligent systems. Stay tuned as I push the boundaries of AI to create technology that transforms industries.</p>"
                             }
                         }
                         ]
@@ -454,6 +494,28 @@ elif page == "Projects":
             st.write("- Categorizes sentiment based on textual input using Logistic Regression.")
             st.write("**Technologies:** Logistic Regression, TF-IDF")
         st.link_button("Live Demo", "https://moodmapr.streamlit.app/")
+
+    g, col5, h, col6, i = st.columns([1, 12, 1, 12, 1])
+    with col5:
+        st.subheader("AI Practical Hub")
+        st.markdown("A dedicated platform for BE AIML practicals.")
+        image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/practical-hub.png"
+        # st.image("https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/proctorvision.png", caption="", use_column_width=True)
+        st.markdown(
+            f"""
+            <div style="border: 2px solid #FF4B4B; border-radius: 5px; padding: 5px; display: inline-block;">
+                <img src="{image_url}" style="display: block; width: 100%; border-radius: 5px;" />
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+        with st.expander("Show More"):
+            st.write("**Description:** A comprehensive system for proctored exams, utilizing advanced AI technologies for real-time monitoring.")
+            st.write("**Key Features:**")
+            st.write("- Implemented background monitoring to detect unauthorized individuals.")
+            st.write("- Deployed OpenCV and MediaPipe for eye gaze tracking and head movement detection.")
+            st.write("**Technologies:** YOLOv8, OpenCV, MediaPipe")
+        st.link_button("Live Demo", "https://beaiml.streamlit.app/")
 
 elif page == "Resume":
     st.markdown("""
