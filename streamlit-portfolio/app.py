@@ -15,139 +15,139 @@ st.set_page_config(
 )
 
 
-components.html(
-    """
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
+# components.html(
+#     """
+# <!DOCTYPE html>
+# <html>
+# <head>
+# <meta name="viewport" content="width=device-width, initial-scale=1">
+# <style>
+# * {box-sizing: border-box;}
+# body {font-family: Verdana, sans-serif;}
+# .mySlides {display: none;}
+# img {vertical-align: middle;}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
+# /* Slideshow container */
+# .slideshow-container {
+#   max-width: 1000px;
+#   position: relative;
+#   margin: auto;
+# }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
+# /* Caption text */
+# .text {
+#   color: #f2f2f2;
+#   font-size: 15px;
+#   padding: 8px 12px;
+#   position: absolute;
+#   bottom: 8px;
+#   width: 100%;
+#   text-align: center;
+# }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+# /* Number text (1/3 etc) */
+# .numbertext {
+#   color: #f2f2f2;
+#   font-size: 12px;
+#   padding: 8px 12px;
+#   position: absolute;
+#   top: 0;
+# }
 
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+# /* The dots/bullets/indicators */
+# .dot {
+#   height: 15px;
+#   width: 15px;
+#   margin: 0 2px;
+#   background-color: #bbb;
+#   border-radius: 50%;
+#   display: inline-block;
+#   transition: background-color 0.6s ease;
+# }
 
-.active {
-  background-color: #717171;
-}
+# .active {
+#   background-color: #717171;
+# }
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+# /* Fading animation */
+# .fade {
+#   animation-name: fade;
+#   animation-duration: 1.5s;
+# }
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
+# @keyframes fade {
+#   from {opacity: .4} 
+#   to {opacity: 1}
+# }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-</style>
-</head>
-<body>
+# /* On smaller screens, decrease text size */
+# @media only screen and (max-width: 300px) {
+#   .text {font-size: 11px}
+# }
+# </style>
+# </head>
+# <body>
 
-<h2>Automatic Slideshow</h2>
-<p>Change image every 2 seconds:</p>
+# <h2>Automatic Slideshow</h2>
+# <p>Change image every 2 seconds:</p>
 
-<div class="slideshow-container">
+# <div class="slideshow-container">
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="https://unsplash.com/photos/GJ8ZQV7eGmU/download?force=true&w=1920" style="width:100%">
-  <div class="text">Caption Text</div>
-</div>
+# <div class="mySlides fade">
+#   <div class="numbertext">1 / 3</div>
+#   <img src="https://unsplash.com/photos/GJ8ZQV7eGmU/download?force=true&w=1920" style="width:100%">
+#   <div class="text">Caption Text</div>
+# </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="https://unsplash.com/photos/eHlVZcSrjfg/download?force=true&w=1920" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
+# <div class="mySlides fade">
+#   <div class="numbertext">2 / 3</div>
+#   <img src="https://unsplash.com/photos/eHlVZcSrjfg/download?force=true&w=1920" style="width:100%">
+#   <div class="text">Caption Two</div>
+# </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="https://unsplash.com/photos/zVhYcSjd7-Q/download?force=true&w=1920" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
+# <div class="mySlides fade">
+#   <div class="numbertext">3 / 3</div>
+#   <img src="https://unsplash.com/photos/zVhYcSjd7-Q/download?force=true&w=1920" style="width:100%">
+#   <div class="text">Caption Three</div>
+# </div>
 
-</div>
-<br>
+# </div>
+# <br>
 
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
+# <div style="text-align:center">
+#   <span class="dot"></span> 
+#   <span class="dot"></span> 
+#   <span class="dot"></span> 
+# </div>
 
-<script>
-let slideIndex = 0;
-showSlides();
+# <script>
+# let slideIndex = 0;
+# showSlides();
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
+# function showSlides() {
+#   let i;
+#   let slides = document.getElementsByClassName("mySlides");
+#   let dots = document.getElementsByClassName("dot");
+#   for (i = 0; i < slides.length; i++) {
+#     slides[i].style.display = "none";  
+#   }
+#   slideIndex++;
+#   if (slideIndex > slides.length) {slideIndex = 1}    
+#   for (i = 0; i < dots.length; i++) {
+#     dots[i].className = dots[i].className.replace(" active", "");
+#   }
+#   slides[slideIndex-1].style.display = "block";  
+#   dots[slideIndex-1].className += " active";
+#   setTimeout(showSlides, 2000); // Change image every 2 seconds
+# }
+# </script>
 
-</body>
-</html> 
+# </body>
+# </html> 
 
-    """,
-    height=600,
-)
+#     """,
+#     height=600,
+# )
 
 
 ### SIDEBAR
@@ -376,12 +376,14 @@ with aboutme:
 
 with proj:
     st.header("My Projects")
+    st.markdown("<br>", unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     
     # Add content to the first column
     with col1:
-        st.subheader("Examiner.AI")
+        st.subheader("ProcotrVision")
         with st.expander("AI-driven Proctored Exam System"):
+            st.image("https://unsplash.com/photos/GJ8ZQV7eGmU/download?force=true&w=1920", caption="", use_column_width=True)
             st.write("**Description:** A comprehensive system for proctored exams, utilizing advanced AI technologies for real-time monitoring.")
             st.write("**Key Features:**")
             st.write("- Implemented YOLOv8 for background monitoring to detect unauthorized individuals, significantly reducing cheating incidents.")
@@ -393,9 +395,11 @@ with proj:
     with col2:
         st.subheader("TinyVGG")
         with st.expander("Image Classification Model Inspired by VGG16"):
+            st.image("https://unsplash.com/photos/GJ8ZQV7eGmU/download?force=true&w=1920", caption="", use_column_width=True)
             st.write("**Description:** An optimized image classification model based on the VGG16 architecture, designed for efficiency.")
             st.write("**Key Features:**")
-            st.write("- Trained the model on the CIFAR-10 dataset, achieving a classification accuracy of 92% with a model size of 4MB.")
+            st.write("- Trained the model on the CIFAR-10 dataset, achieving a classification accuracy of 92%.")
+            st.write("- Efficient architecture for smaller resource usage with a model size of 4MB.")
             st.write("**Technologies:** TensorFlow, Keras, CNN")
             st.write("[View Live Demo](https://your-streamlit-app-url)")
 
@@ -405,18 +409,22 @@ with proj:
     with col3:
         st.subheader("CineMate")
         with st.expander("Movie Recommendation System"):
+            st.image("https://unsplash.com/photos/GJ8ZQV7eGmU/download?force=true&w=1920", caption="", use_column_width=True)
             st.write("**Description:** Created with K-Nearest Neighbors and TF-IDF to deliver the top 10 personalized movie picks.")
             st.write("**Key Features:**")
-            st.write("- Includes 8,000 top Netflix movies and 75,000 top TMDB movies.")
+            st.write("- Personalized top 10 movie recommendations based on user preferences.")
+            st.write("- Dataset of 8,000 Netflix movies and 75,000 TMDB movies.")
             st.write("**Technologies:** KNN, TF-IDF")
             st.write("[View Live Demo](https://your-streamlit-app-url)")
 
     with col4:
         st.subheader("MoodMapper")
         with st.expander("Sentiment Analysis Tool"):
+            st.image("https://unsplash.com/photos/GJ8ZQV7eGmU/download?force=true&w=1920", caption="", use_column_width=True)
             st.write("**Description:** Logistic Regression and TF-IDF vectorization used for sentiment categorization.")
             st.write("**Key Features:**")
-            st.write("- Analyzed over 50,000 movie reviews, achieving 90% accuracy.")
+            st.write("- Analyzed 50,000+ movie reviews, achieving 90% accuracy.")
+            st.write("- Categorizes sentiment based on textual input using Logistic Regression.")
             st.write("**Technologies:** Logistic Regression, TF-IDF")
             st.write("[View Live Demo](https://your-streamlit-app-url)")
 
