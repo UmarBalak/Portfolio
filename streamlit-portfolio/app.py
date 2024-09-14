@@ -1,11 +1,7 @@
 import streamlit as st 
 from streamlit_timeline import timeline
-import numpy as np
-import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-import openpyxl
-import base64
 from plotly.subplots import make_subplots
 
 ### METADATA
@@ -13,6 +9,7 @@ st.set_page_config(
     page_title="Umar Balak | Portfolio",
     page_icon="📈",
     layout="wide",
+    initial_sidebar_state="expanded",
 )
 
 ### SIDEBAR
@@ -50,7 +47,7 @@ st.sidebar.markdown(
     </style>
     
     <div class="custom-font">
-        Harry J. Potter
+        Umar A. Balak
     </div>
     """,
     unsafe_allow_html=True
@@ -66,7 +63,7 @@ st.sidebar.caption(
     ''',
     unsafe_allow_html=True
     )
-    
+
 # Create 4 columns for the logos with reduced spacing
 c1, c2, gmail, github, linkedin, c4, c5= st.sidebar.columns(7)
 # Gmail button
