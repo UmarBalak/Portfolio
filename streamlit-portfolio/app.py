@@ -257,7 +257,7 @@ st.sidebar.markdown(
 #                                     "Resume"])
 if page == "About Me":
     ### TIMELINE
-    with open('../streamlit-portfolio/timeline.json', "r") as f:
+    with open('timeline.json', "r") as f:
         data = f.read()
     c1, c2, c3 = st.columns([1, 25, 1])
     with c2:
