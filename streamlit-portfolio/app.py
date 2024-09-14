@@ -315,6 +315,20 @@ if page == "About Me":
                         },
                         "start_date": {
                             "year": "2023",
+                            "month": "3"
+                        },
+                        "text": {
+                            "headline": "Microsoft Certified: Azure AI Fundamentals (AI-900)",
+                            "text": "<p>Demonstrated expertise in foundational knowledge of AI and Machine Learning concepts using Microsoft Azure AI services.</p>"
+                        }
+                    },
+                        {
+                        "media": {
+                            "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/nasa.jpg",
+                            "caption": ""
+                        },
+                        "start_date": {
+                            "year": "2023",
                             "month": "10"
                         },
                         "text": {
