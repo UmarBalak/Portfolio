@@ -560,6 +560,16 @@ elif page == "Resume":
     c1, c2, c3 = st.columns([1, 25, 1])
     # Education Section
     with c2:
+        resume_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/Resume.pdf"
+        st.markdown(
+            f"""
+            <a href="{resume_url}" download>
+                <button style="width:100%; padding:10px; background-color:white; color:#FF4B4B; border:2px solid #FF4B4B; border-radius:5px; cursor:pointer; text-align:center;">Download Resume</button>
+            </a>
+            """,
+            unsafe_allow_html=True
+        )
+        st.write("---")
         st.markdown('<div class="section-header">Education</div>', unsafe_allow_html=True)
         with st.expander("Show/Hide", expanded=True):
             st.markdown('<div class="section-sub-header">Saraswati College Of Engineering</div>', unsafe_allow_html=True)
@@ -639,10 +649,4 @@ elif page == "Resume":
             st.write("Microsoft Certified: Azure AI Fundamentals")
             st.markdown('<div class="right">March 2023</div>', unsafe_allow_html=True)
 
-        with open("assets/Resume.pdf", "rb") as file:
-            st.download_button(
-                label="Download Resume",
-                data=file,
-                file_name="Umar_Balak_Resume.pdf",
-                mime="application/pdf"
-            )
+        
