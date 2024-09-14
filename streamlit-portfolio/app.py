@@ -340,7 +340,7 @@ if page == "About Me":
                     }
     ### TIMELINE
     data = timeline_data
-    c1, c2, c3 = st.columns([1, 25, 1])
+    c1, c2, c3 = st.columns([1, 30, 1])
     with c2:
         st.header("Career Snapshot")
         timeline(data, height=500)
