@@ -256,9 +256,90 @@ st.sidebar.markdown(
 #                                     "Projects", 
 #                                     "Resume"])
 if page == "About Me":
+    timeline_data =                 {
+                        "title": {
+                            "media": {
+                            "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/about-pic.jpg",
+                            "caption": ""
+                            },
+                            "text": {
+                            "headline": "My Journey",
+                            "text": "<p>A timeline of key milestones that highlight my technical growth, problem-solving abilities, and dedication to excellence. Each achievement showcases my skills and contributions across various projects.<br><b>Discover why I'm prepared to add value to your organization at the conclusion.</b></p>"
+                            }
+
+
+                        },
+                        "events": [
+                        {
+                            "start_date": {
+                                "year": "2019",
+                                "month": "5"
+                            },
+                            "text": {
+                                "headline": "Scored 88.40% in 10th grade",
+                                "text": "<p>Studied in Anjuman Islam Janjira High School for class 10th and scored 88.40% in Maharashtra Board Examination.</p>"
+                            }
+                        },
+                        {
+                            "start_date": {
+                                "year": "2021",
+                                "month": "5"
+                            },
+                            "text": {
+                                "headline": "12th Science with PCMB",
+                                "text": "<p>Studied in Anjuman Islam Janjira Jr. College for class 12th and scored 92.50%</p>"
+                            }
+                        },
+                        {
+                            "media": {
+                                "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/scoe.jpg",
+                                "caption": ""
+                            },
+                            "start_date": {
+                                "year": "2021",
+                                "month": "6"
+                            },
+                            "end_date": {
+                                "year": "2025",
+                                "month": "6"
+                            },
+                            "text": {
+                                "headline": "Saraswati College Of Engineering, Kharghar",
+                                "text": "<p>Started pursuing Bachelors of engineering in CSE with specialization Artificial Intelligence and Machine Learning.</p>"
+                            }
+                        },
+                        {
+                        "media": {
+                            "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/nasa.jpg",
+                            "caption": ""
+                        },
+                        "start_date": {
+                            "year": "2023",
+                            "month": "10"
+                        },
+                        "text": {
+                            "headline": "Participated in NASA Space App Challenge",
+                            "text": "<p>Gained valuable experience by developing an intelligent project collaboration system, applying skills in machine learning and web development.</p>"
+                        }
+                    },
+                        {
+                            "media": {
+                                "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/quasar.jpg",
+                                "caption": ""
+                            },
+                            "start_date": {
+                                "year": "2024",
+                                "month": "3"
+                            },
+                            "text": {
+                                "headline": "1st Prize - Quasar 2.0 Hackathon",
+                                "text": "<p>Developed an innovative AI Proctored Exam System that excelled in real-time monitoring and cheating detection, securing 1st place.</p>"
+                            }
+                        }
+                        ]
+                    }
     ### TIMELINE
-    with open('timeline.json', "r") as f:
-        data = f.read()
+    data = timeline_data
     c1, c2, c3 = st.columns([1, 25, 1])
     with c2:
         st.header("Career Snapshot")
