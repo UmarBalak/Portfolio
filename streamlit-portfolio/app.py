@@ -122,8 +122,6 @@ aboutme, certs, proj, resume = st.tabs(["About me",
                                     "Certifications",
                                     "Projects", 
                                     "Resume"])
-
-
 with aboutme:
     ### TIMELINE
     with open('../streamlit-portfolio/timeline.json', "r") as f:
@@ -254,20 +252,6 @@ with proj:
 
 st.markdown("""
     <style>
-    /* Style the expander's button text */
-    [data-baseweb="collapse"] .st-bv {
-        font-size: 18px !important;
-        font-weight: bold !important;
-        color: #4B8BBE !important;
-        background-color: #f0f2f6 !important;
-        padding: 10px !important;
-        border-radius: 5px !important;
-    }
-    /* Optional: add hover effects to make it more interactive */
-    [data-baseweb="collapse"] .st-bv:hover {
-        background-color: #e0e6f0 !important;
-        color: #333 !important;
-    }
     .right {
         float: right;
         color: #999;
