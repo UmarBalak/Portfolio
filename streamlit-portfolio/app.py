@@ -510,11 +510,11 @@ elif page == "Projects":
             unsafe_allow_html=True
         )
         with st.expander("Show More"):
-            st.write("**Description:** A comprehensive system for proctored exams, utilizing advanced AI technologies for real-time monitoring.")
+            st.write("**Description:** A centralized hub for BE AIML practicals, offering regularly updated code and documentation for student learning.")
             st.write("**Key Features:**")
-            st.write("- Implemented background monitoring to detect unauthorized individuals.")
-            st.write("- Deployed OpenCV and MediaPipe for eye gaze tracking and head movement detection.")
-            st.write("**Technologies:** YOLOv8, OpenCV, MediaPipe")
+            st.write("- Provides organized code and comprehensive documentation for each AIML practical.")
+            st.write("- Simplifies access to practicals with regularly updated content for seamless learning.")
+            st.write("**Technologies:** Python, Streamlit")
         st.link_button("Live Demo", "https://beaiml.streamlit.app/")
 
 elif page == "Resume":
@@ -638,3 +638,11 @@ elif page == "Resume":
             st.markdown('<div class="section-sub-header">Microsoft Azure AI-900 - Microsoft</div>', unsafe_allow_html=True)
             st.write("Microsoft Certified: Azure AI Fundamentals")
             st.markdown('<div class="right">March 2023</div>', unsafe_allow_html=True)
+
+        with open("assets/Resume.pdf", "rb") as file:
+            st.download_button(
+                label="Download Resume",
+                data=file,
+                file_name="Umar_Balak_Resume.pdf",
+                mime="application/pdf"
+            )
