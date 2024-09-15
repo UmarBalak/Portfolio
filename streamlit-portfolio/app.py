@@ -20,6 +20,7 @@ hide_streamlit_style = """
     .css-1v0mbdj {visibility: hidden;} /* Hides the overall container */
     </style>
     """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # # Custom CSS to give a coding theme look
 # st.markdown(
