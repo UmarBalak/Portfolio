@@ -1,6 +1,7 @@
 import streamlit as st 
 from streamlit_timeline import timeline
 from streamlit_option_menu import option_menu
+import time
 
 ### METADATA
 st.set_page_config(
@@ -9,10 +10,57 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+# # Custom CSS to give a coding theme look
+# st.markdown(
+#     """
+#     <style>
+#     .loading-text {
+#         font-family: 'Courier New', Courier, monospace;
+#         font-size: 48px;
+#         color: black;
+#         white-space: nowrap;
+#         overflow: hidden;
+#         border-right: 4px solid; /* Cursor */
+#         width: 12ch; /* Control the length of the text animation */
+#         animation: typing 1s steps(12, end), blink-caret 0.75s step-end infinite;
+#         margin-top: 20%;
+#         text-align: center;
+#         margin-left: auto;
+#         margin-right: auto;
+#     }
+
+#     /* Typing effect */
+#     @keyframes typing {
+#         from { width: 0 }
+#         to { width: 12ch }
+#     }
+
+#     /* Blinking cursor */
+#     @keyframes blink-caret {
+#         from, to { border-color: transparent }
+#         50% { border-color: black }
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
+
+# # Create a placeholder for the loading message with CSS styling
+# loading_message = st.empty()
+
+# # Display the loading message with custom HTML/CSS
+# loading_message.markdown('<div class="loading-text">Hello World!</div>', unsafe_allow_html=True)
+
+# # Simulate loading or initialization tasks
+# time.sleep(2)  # Replace with actual setup code if needed
+
+# # Clear the message after loading
+# loading_message.empty()
+
 page = option_menu(
         menu_title=None,
         options=["About Me", "Projects", "Resume"],
-        icons = ["about", "bar-chart", "resume"],
+        icons = ["person", "bar-chart", "share"],
         menu_icon="cast",
         default_index=0,
         orientation="horizontal",
