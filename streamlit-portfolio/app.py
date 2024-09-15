@@ -33,7 +33,7 @@ if 'loading_animation_shown' not in st.session_state:
         /* Loading text styling */
         .loading-text {
             font-family: 'Fira Code', monospace;
-            font-size: 48px;
+            font-size: 40px;
             color: black;
             white-space: nowrap;
             overflow: hidden;
@@ -111,7 +111,7 @@ if 'loading_animation_shown' not in st.session_state:
 
 page = option_menu(
         menu_title=None,
-        options=["About Me", "Projects", "Resume"],
+        options=["About", "Projects", "Resume"],
         icons = ["person", "bar-chart", "share"],
         menu_icon="cast",
         default_index=0,
@@ -355,7 +355,7 @@ st.sidebar.markdown(
 # aboutme, proj, resume = st.tabs(["About me",
 #                                     "Projects", 
 #                                     "Resume"])
-if page == "About Me":
+if page == "About":
     timeline_data =                 {
                         "title": {
                             "media": {
