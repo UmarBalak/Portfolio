@@ -22,52 +22,92 @@ hide_streamlit_style = """
     """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# # Custom CSS to give a coding theme look
-# st.markdown(
-#     """
-#     <style>
-#     .loading-text {
-#         font-family: 'Courier New', Courier, monospace;
-#         font-size: 48px;
-#         color: black;
-#         white-space: nowrap;
-#         overflow: hidden;
-#         border-right: 4px solid; /* Cursor */
-#         width: 12ch; /* Control the length of the text animation */
-#         animation: typing 1s steps(12, end), blink-caret 0.75s step-end infinite;
-#         margin-top: 20%;
-#         text-align: center;
-#         margin-left: auto;
-#         margin-right: auto;
-#     }
+if 'loading_animation_shown' not in st.session_state:
+    # Custom CSS to give a coding theme look
+    st.markdown(
+        """
+        <style>
+        /* Importing a programmer-style font */
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
 
-#     /* Typing effect */
-#     @keyframes typing {
-#         from { width: 0 }
-#         to { width: 12ch }
-#     }
+        /* Loading text styling */
+        .loading-text {
+            font-family: 'Fira Code', monospace;
+            font-size: 48px;
+            color: black;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 4px solid; /* Cursor */
+            width: 14ch; /* Control the length of the text animation */
+            animation: typing 1.5s steps(14, end), blink-caret 0.75s step-end infinite;
+            margin-top: 10%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for contrast */
+        }
 
-#     /* Blinking cursor */
-#     @keyframes blink-caret {
-#         from, to { border-color: transparent }
-#         50% { border-color: black }
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
+        /* Typing effect */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 14ch }
+        }
 
-# # Create a placeholder for the loading message with CSS styling
-# loading_message = st.empty()
+        /* Blinking cursor */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: black }
+        }
 
-# # Display the loading message with custom HTML/CSS
-# loading_message.markdown('<div class="loading-text">Hello World!</div>', unsafe_allow_html=True)
+        /* Loading bar container */
+        .loading-bar-container {
+            width: 50%;
+            height: 10px;
+            background-color: #e0e0e0;
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
 
-# # Simulate loading or initialization tasks
-# time.sleep(2)  # Replace with actual setup code if needed
+        /* Loading bar itself */
+        .loading-bar {
+            height: 100%;
+            width: 0%;
+            background-color: #F16060;
+            border-radius: 10px;
+            animation: load-progress 1.5s linear forwards;
+        }
 
-# # Clear the message after loading
-# loading_message.empty()
+        /* Loading bar animation */
+        @keyframes load-progress {
+            0% { width: 0% }
+            100% { width: 100% }
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Create a placeholder for the loading message and bar
+    loading_message = st.empty()
+
+    # Display the loading message with custom HTML/CSS
+    loading_message.markdown(
+        """
+        <div class="loading-text">Hello World!</div>
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+    # Simulate loading or initialization tasks
+    time.sleep(2)  # Replace with actual setup code if needed
+
+    st.session_state['loading_animation_shown'] = True
+
+    # Clear the message after loading
+    loading_message.empty()
 
 page = option_menu(
         menu_title=None,
