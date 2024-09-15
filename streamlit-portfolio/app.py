@@ -10,6 +10,17 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;} /* Hides the main menu */
+    footer {visibility: hidden;} /* Hides the footer */
+    header {visibility: hidden;} /* Hides the header */
+    .css-1d391kg {visibility: hidden;} /* Hides the status indicator */
+    .css-1v3fvcr {visibility: hidden;} /* Hides the Streamlit watermark */
+    .css-1v0mbdj {visibility: hidden;} /* Hides the overall container */
+    </style>
+    """
+
 # # Custom CSS to give a coding theme look
 # st.markdown(
 #     """
@@ -545,7 +556,7 @@ elif page == "Projects":
 
     g, col5, h, col6, i = st.columns([1, 12, 1, 12, 1])
     with col5:
-        st.subheader("AI Practical Hub")
+        st.subheader("AIML Practical Hub")
         st.markdown("A dedicated platform for BE AIML practicals.")
         image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/practical-hub.png"
         # st.image("https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/proctorvision.png", caption="", use_column_width=True)
