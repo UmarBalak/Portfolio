@@ -323,7 +323,7 @@ if page == "About Me":
                             },
                             "text": {
                             "headline": "My Journey",
-                            "text": "<p>A timeline of key milestones that highlight my technical growth, problem-solving abilities, and dedication to excellence. Each achievement showcases my skills and contributions across various projects.<br><b>Discover why I'm prepared to add value to your organization at the conclusion.</b></p>"
+                            "text": "<p>A timeline of key milestones that highlight my technical growth, problem-solving abilities, and dedication to excellence.<br><b>Discover why I'm prepared to add value to your organization at the conclusion.</b></p>"
                             }
 
 
