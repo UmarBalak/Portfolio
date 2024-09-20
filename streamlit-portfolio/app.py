@@ -594,7 +594,7 @@ elif page == "Projects":
             st.write("- Categorizes sentiment based on textual input using Logistic Regression.")
             st.write("**Technologies:** Logistic Regression, TF-IDF")
         st.link_button("Live Demo", "https://moodmapr.streamlit.app/")
-
+    st.write("---")
     g, col5, h, col6, i = st.columns([1, 12, 1, 12, 1])
     with col5:
         st.subheader("AIML Practical Hub")
