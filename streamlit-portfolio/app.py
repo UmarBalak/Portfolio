@@ -207,12 +207,12 @@ linkedin.markdown(
     unsafe_allow_html=True
 )
 
-st.sidebar.write('---')
+# st.sidebar.write('---')
 
-with open('quotes.json', 'r') as file:
-    quotes = json.load(file)
+# with open('quotes.json', 'r') as file:
+#     quotes = json.load(file)
 
-random_quote = random.choice(quotes)
+# random_quote = random.choice(quotes)
 # Display the random quote
 # st.sidebar.markdown(
 #     f'<p style="text-align: center; font-size: 12px;">“{random_quote["quote"]}” - <em>{random_quote["author"]}</em></p>',
