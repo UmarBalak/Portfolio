@@ -2,8 +2,6 @@ import streamlit as st
 from streamlit_timeline import timeline
 from streamlit_option_menu import option_menu
 import time
-import json
-import random
 
 ### METADATA
 st.set_page_config(
@@ -24,92 +22,92 @@ hide_streamlit_style = """
     """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-if 'loading_animation_shown' not in st.session_state:
-    # Custom CSS to give a coding theme look
-    st.markdown(
-        """
-        <style>
-        /* Importing a programmer-style font */
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+# if 'loading_animation_shown' not in st.session_state:
+#     # Custom CSS to give a coding theme look
+#     st.markdown(
+#         """
+#         <style>
+#         /* Importing a programmer-style font */
+#         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
 
-        /* Loading text styling */
-        .loading-text {
-            font-family: 'Fira Code', monospace;
-            font-size: 40px;
-            color: black;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 4px solid; /* Cursor */
-            width: 14ch; /* Control the length of the text animation */
-            animation: typing 1.5s steps(14, end), blink-caret 0.75s step-end infinite;
-            margin-top: 10%;
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for contrast */
-        }
+#         /* Loading text styling */
+#         .loading-text {
+#             font-family: 'Fira Code', monospace;
+#             font-size: 40px;
+#             color: black;
+#             white-space: nowrap;
+#             overflow: hidden;
+#             border-right: 4px solid; /* Cursor */
+#             width: 14ch; /* Control the length of the text animation */
+#             animation: typing 1.5s steps(14, end), blink-caret 0.75s step-end infinite;
+#             margin-top: 10%;
+#             text-align: center;
+#             margin-left: auto;
+#             margin-right: auto;
+#             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for contrast */
+#         }
 
-        /* Typing effect */
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 14ch }
-        }
+#         /* Typing effect */
+#         @keyframes typing {
+#             from { width: 0 }
+#             to { width: 14ch }
+#         }
 
-        /* Blinking cursor */
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: black }
-        }
+#         /* Blinking cursor */
+#         @keyframes blink-caret {
+#             from, to { border-color: transparent }
+#             50% { border-color: black }
+#         }
 
-        /* Loading bar container */
-        .loading-bar-container {
-            width: 50%;
-            height: 10px;
-            background-color: #e0e0e0;
-            margin: 20px auto;
-            border-radius: 10px;
-            overflow: hidden;
-        }
+#         /* Loading bar container */
+#         .loading-bar-container {
+#             width: 50%;
+#             height: 10px;
+#             background-color: #e0e0e0;
+#             margin: 20px auto;
+#             border-radius: 10px;
+#             overflow: hidden;
+#         }
 
-        /* Loading bar itself */
-        .loading-bar {
-            height: 100%;
-            width: 0%;
-            background-color: #F16060;
-            border-radius: 10px;
-            animation: load-progress 1.5s linear forwards;
-        }
+#         /* Loading bar itself */
+#         .loading-bar {
+#             height: 100%;
+#             width: 0%;
+#             background-color: #F16060;
+#             border-radius: 10px;
+#             animation: load-progress 1.5s linear forwards;
+#         }
 
-        /* Loading bar animation */
-        @keyframes load-progress {
-            0% { width: 0% }
-            100% { width: 100% }
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+#         /* Loading bar animation */
+#         @keyframes load-progress {
+#             0% { width: 0% }
+#             100% { width: 100% }
+#         }
+#         </style>
+#         """,
+#         unsafe_allow_html=True
+#     )
 
-    # Create a placeholder for the loading message and bar
-    loading_message = st.empty()
+#     # Create a placeholder for the loading message and bar
+#     loading_message = st.empty()
 
-    # Display the loading message with custom HTML/CSS
-    loading_message.markdown(
-        """
-        <div class="loading-text">Hello World!</div>
-        <div class="loading-bar-container">
-            <div class="loading-bar"></div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-    # Simulate loading or initialization tasks
-    time.sleep(2)  # Replace with actual setup code if needed
+#     # Display the loading message with custom HTML/CSS
+#     loading_message.markdown(
+#         """
+#         <div class="loading-text">Hello World!</div>
+#         <div class="loading-bar-container">
+#             <div class="loading-bar"></div>
+#         </div>
+#         """,
+#         unsafe_allow_html=True
+#     )
+#     # Simulate loading or initialization tasks
+#     time.sleep(2)  # Replace with actual setup code if needed
 
-    st.session_state['loading_animation_shown'] = True
+#     st.session_state['loading_animation_shown'] = True
 
-    # Clear the message after loading
-    loading_message.empty()
+#     # Clear the message after loading
+#     loading_message.empty()
 
 page = option_menu(
         menu_title=None,
@@ -206,34 +204,6 @@ linkedin.markdown(
     """, 
     unsafe_allow_html=True
 )
-
-# st.sidebar.write('---')
-
-# with open('quotes.json', 'r') as file:
-#     quotes = json.load(file)
-
-# random_quote = random.choice(quotes)
-# Display the random quote
-# st.sidebar.markdown(
-#     f'<p style="text-align: center; font-size: 12px;">“{random_quote["quote"]}” - <em>{random_quote["author"]}</em></p>',
-#     unsafe_allow_html=True
-# )
-# st.sidebar.markdown(
-#     f"""
-#     <div style="
-#         text-align: center; 
-#         font-size: 20px; 
-#         border: 1px solid #ccc; 
-#         border-radius: 8px; 
-#         padding: 5px; 
-#         margin-top: 20px;
-#         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-#         ">
-#         “{random_quote["quote"]}” - <em>{random_quote["author"]}</em>
-#     </div>
-#     """,
-#     unsafe_allow_html=True
-# )
 
 if page == "About":
     timeline_data =                 {
@@ -380,6 +350,61 @@ if page == "About":
         timeline(data, height=500)
 
     st.write("---")
+
+    c4, c5, c6 = st.columns([1, 30, 1])
+    with c5:
+        st.header("Skills & Technologies")
+        st.markdown("""
+        <style>
+        .pill-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            max-width: 100%;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            border: 1px solid #FF4B4B;
+            font-weight: 600;
+            cursor: default;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .pill:hover {
+            background-color: #FF4B4B;
+            color: white;
+        }
+
+        </style>
+        """, unsafe_allow_html=True)
+
+        # Display pills using custom HTML and CSS
+        st.markdown("""
+        <div class="pill-container">
+            <div class="pill">Deep Learning</div>
+            <div class="pill">Machine Learning</div>
+            <div class="pill">Convolutional Neural Networks (CNN)</div>
+            <div class="pill">Python</div>
+            <div class="pill">TensorFlow</div>
+            <div class="pill">Scikit-Learn</div>
+            <div class="pill">Keras</div>
+            <div class="pill">Pandas</div>
+            <div class="pill">NumPy</div>
+            <div class="pill">OpenCV</div>
+            <div class="pill">Streamlit</div>
+            <div class="pill">SQL</div>
+            <div class="pill">MySQL</div>  
+            <div class="pill">Git</div>
+            <div class="pill">GitHub</div>
+            <div class="pill">Jupyter Notebook</div>
+            <div class="pill">Power BI</div>
+        </div>
+        """, unsafe_allow_html=True)
 
 elif page == "Projects":
     # st.header("My Projects")
