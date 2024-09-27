@@ -431,8 +431,6 @@ elif page == "Projects":
             st.write("- Efficient architecture for smaller resource usage with a model size of 4MB.")
             st.write("**Technologies:** TensorFlow, Keras, CNN")
         st.link_button("Try Now", "https://tinyvgg.streamlit.app/")
-        if st.button("Show More Info (Pop-up)"):
-            show_popup()
 
     # Add content to the second column
     with col2:
