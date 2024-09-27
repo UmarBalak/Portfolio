@@ -416,7 +416,6 @@ elif page == "Projects":
         st.subheader("TinyVGG")
         st.markdown("CNN Based Image Classification Model")
         image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/tinyvgg.png"
-        # st.image("https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/tinyvgg.png", caption="", use_column_width=True)
         st.markdown(
             f"""
             <div style="border: 2px solid #FF4B4B; border-radius: 5px; padding: 5px; display: inline-block;">
@@ -425,20 +424,21 @@ elif page == "Projects":
             """,
             unsafe_allow_html=True
         )
-        with st.expander("Show More", expanded=True):
+        with st.expander("More Info", expanded=True):
             st.write("**Description:** An optimized image classification model based on the VGG16 architecture, designed for efficiency.")
             st.write("**Key Features:**")
             st.write("- Trained the model on the CIFAR-10 dataset, achieving a classification accuracy of 92%.")
             st.write("- Efficient architecture for smaller resource usage with a model size of 4MB.")
             st.write("**Technologies:** TensorFlow, Keras, CNN")
-        st.link_button("Live Demo", "https://tinyvgg.streamlit.app/")
+        st.link_button("Try Now", "https://tinyvgg.streamlit.app/")
+        if st.button("Show More Info (Pop-up)"):
+            show_popup()
 
     # Add content to the second column
     with col2:
         st.subheader("CineMate")
         st.markdown("Movie Recommendation System")
         image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/cinemate.png"
-            # st.image("https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/cinemate.png", caption="", use_column_width=True)
         st.markdown(
         f"""
         <div style="border: 2px solid #FF4B4B; border-radius: 5px; padding: 5px; display: inline-block;">
@@ -447,13 +447,13 @@ elif page == "Projects":
         """,
         unsafe_allow_html=True
         )
-        with st.expander("Show More", expanded=True):
+        with st.expander("More Info", expanded=True):
             st.write("**Description:** Created with K-Nearest Neighbors and TF-IDF to deliver the top 10 personalized movie picks.")
             st.write("**Key Features:**")
             st.write("- Personalized top 10 movie recommendations based on user preferences.")
             st.write("- Dataset of 8,000 Netflix movies and 75,000 TMDB movies.")
             st.write("**Technologies:** KNN, TF-IDF")
-        st.link_button("Live Demo", "https://cinem8.streamlit.app/")
+        st.link_button("Try Now", "https://cinem8.streamlit.app/")
     st.write("---")
     # Add another row with two more expanders
     d, col3, e, col4, f = st.columns([1, 12, 1, 12, 1])
@@ -462,7 +462,6 @@ elif page == "Projects":
         st.subheader("ProctorVision")
         st.markdown("AI-driven Proctored Exam System")
         image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/proctorvision.png"
-        # st.image("https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/proctorvision.png", caption="", use_column_width=True)
         st.markdown(
             f"""
             <div style="border: 2px solid #FF4B4B; border-radius: 5px; padding: 5px; display: inline-block;">
@@ -471,19 +470,18 @@ elif page == "Projects":
             """,
             unsafe_allow_html=True
         )
-        with st.expander("Show More"):
+        with st.expander("More Info"):
             st.write("**Description:** A comprehensive system for proctored exams, utilizing advanced AI technologies for real-time monitoring.")
             st.write("**Key Features:**")
             st.write("- Implemented background monitoring to detect unauthorized individuals.")
             st.write("- Deployed OpenCV and MediaPipe for eye gaze tracking and head movement detection.")
             st.write("**Technologies:** YOLOv8, OpenCV, MediaPipe")
-        st.link_button("Live Demo", "https://proctorvision.streamlit.app/")
+        st.link_button("Try Now", "https://proctorvision.streamlit.app/")
 
     with col4:
         st.subheader("MoodMapper")
         st.markdown("Sentiment Analysis Tool")
         image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/moodmapper.png"
-        # st.image("https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/moodmapper.png", caption="", use_column_width=True)
         st.markdown(
         f"""
         <div style="border: 2px solid #FF4B4B; border-radius: 5px; padding: 5px; display: inline-block;">
@@ -492,20 +490,19 @@ elif page == "Projects":
         """,
         unsafe_allow_html=True
         )
-        with st.expander("Show More"):
+        with st.expander("More Info"):
             st.write("**Description:** Logistic Regression and TF-IDF vectorization used for sentiment categorization.")
             st.write("**Key Features:**")
             st.write("- Analyzed 50,000+ movie reviews, achieving 90% accuracy.")
             st.write("- Categorizes sentiment based on textual input using Logistic Regression.")
             st.write("**Technologies:** Logistic Regression, TF-IDF")
-        st.link_button("Live Demo", "https://moodmapr.streamlit.app/")
+        st.link_button("Try Now", "https://moodmapr.streamlit.app/")
     st.write("---")
     g, col5, h, col6, i = st.columns([1, 12, 1, 12, 1])
     with col5:
         st.subheader("AIML Practical Hub")
         st.markdown("A dedicated platform for BE AIML practicals.")
         image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/practical-hub.png"
-        # st.image("https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/proctorvision.png", caption="", use_column_width=True)
         st.markdown(
             f"""
             <div style="border: 2px solid #FF4B4B; border-radius: 5px; padding: 5px; display: inline-block;">
@@ -514,13 +511,13 @@ elif page == "Projects":
             """,
             unsafe_allow_html=True
         )
-        with st.expander("Show More"):
+        with st.expander("More Info"):
             st.write("**Description:** A centralized hub for BE AIML practicals, offering regularly updated code and documentation for student learning.")
             st.write("**Key Features:**")
             st.write("- Provides organized code and comprehensive documentation for each AIML practical.")
             st.write("- Simplifies access to practicals with regularly updated content for seamless learning.")
             st.write("**Technologies:** Python, Streamlit")
-        st.link_button("Live Demo", "https://beaiml.streamlit.app/")
+        st.link_button("Try Now", "https://beaiml.streamlit.app/")
 
 elif page == "Resume":
     st.markdown("""
