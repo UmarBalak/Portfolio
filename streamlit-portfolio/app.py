@@ -10,8 +10,12 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
-hide_streamlit_style = """
+# Custom CSS to set the background color to white
+st.markdown("""
     <style>
+    body {
+        background-color: white;
+    }
     #MainMenu {visibility: hidden;} /* Hides the main menu */
     footer {visibility: hidden;} /* Hides the footer */
     header {visibility: hidden;} /* Hides the header */
@@ -19,8 +23,7 @@ hide_streamlit_style = """
     .css-1v3fvcr {visibility: hidden;} /* Hides the Streamlit watermark */
     .css-1v0mbdj {visibility: hidden;} /* Hides the overall container */
     </style>
-    """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
 
 page = option_menu(
         menu_title=None,
