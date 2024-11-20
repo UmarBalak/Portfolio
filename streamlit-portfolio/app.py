@@ -348,24 +348,24 @@ elif page == "Projects":
 
     # Add content to the second column
     with col2:
-        st.subheader("CineMate")
-        st.markdown("Movie Recommendation System")
-        image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/cinemate.png"
+        st.subheader("CNNCanvas 'Ongoing Development'")
+        st.markdown("Dynamic Convolutional Neural Network Designer")
+        image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/cnncanvas.png"
         st.markdown(
-        f"""
-        <div style="border: 2px solid #FF4B4B; border-radius: 5px; padding: 5px; display: inline-block;">
-            <img src="{image_url}" style="display: block; width: 100%; border-radius: 5px;" />
-        </div>
-        """,
-        unsafe_allow_html=True
+            f"""
+            <div style="border: 2px solid #4B7DFF; border-radius: 5px; padding: 5px; display: inline-block;">
+                <img src="{image_url}" style="display: block; width: 100%; border-radius: 5px;" />
+            </div>
+            """,
+            unsafe_allow_html=True
         )
-        with st.expander("More Info", expanded=True):
-            st.write("**Description:** Created with K-Nearest Neighbors and TF-IDF to deliver the top 10 personalized movie picks.")
+        with st.expander("More Info"):
+            st.write("**Description:** An interactive web application for designing and visualizing Convolutional Neural Network architectures.")
             st.write("**Key Features:**")
-            st.write("- Personalized top 10 movie recommendations based on user preferences.")
-            st.write("- Dataset of 8,000 Netflix movies and 75,000 TMDB movies.")
-            st.write("**Technologies:** KNN, TF-IDF")
-        st.link_button("Try Now", "https://cinem8.streamlit.app/")
+            st.write("- Dynamic layer configuration")
+            st.write("- Real-time parameter and model size estimation")
+            st.write("**Technologies:** Python, Streamlit, Machine Learning")
+        st.link_button("Try Now", "https://cnncanvas.streamlit.app/")
     st.write("---")
     # Add another row with two more expanders
     d, col3, e, col4, f = st.columns([1, 12, 1, 12, 1])
@@ -430,6 +430,25 @@ elif page == "Projects":
             st.write("- Simplifies access to practicals with regularly updated content for seamless learning.")
             st.write("**Technologies:** Python, Streamlit")
         st.link_button("Try Now", "https://beaiml.streamlit.app/")
+    with col6:
+        st.subheader("CineMate")
+        st.markdown("Movie Recommendation System")
+        image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/cinemate.png"
+        st.markdown(
+        f"""
+        <div style="border: 2px solid #FF4B4B; border-radius: 5px; padding: 5px; display: inline-block;">
+            <img src="{image_url}" style="display: block; width: 100%; border-radius: 5px;" />
+        </div>
+        """,
+        unsafe_allow_html=True
+        )
+        with st.expander("More Info", expanded=True):
+            st.write("**Description:** Created with K-Nearest Neighbors and TF-IDF to deliver the top 10 personalized movie picks.")
+            st.write("**Key Features:**")
+            st.write("- Personalized top 10 movie recommendations based on user preferences.")
+            st.write("- Dataset of 8,000 Netflix movies and 75,000 TMDB movies.")
+            st.write("**Technologies:** KNN, TF-IDF")
+        st.link_button("Try Now", "https://cinem8.streamlit.app/")
 
 elif page == "Resume":
     st.markdown("""
