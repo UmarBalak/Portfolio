@@ -348,18 +348,18 @@ elif page == "Projects":
 
     # Add content to the second column
     with col2:
-        st.subheader("CNNCanvas 'Ongoing Development'")
-        st.markdown("Dynamic Convolutional Neural Network Designer")
+        st.subheader("CNNCanvas")
+        st.markdown("Dynamic Convolutional Neural Network Designer <small style='color:#FF6B6B; margin-left:10px; font-size:0.6em; background-color:#FFF3F3; padding:3px 6px; border-radius:4px;'>Ongoing</small>", unsafe_allow_html=True)
         image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/cnncanvas.png"
         st.markdown(
             f"""
-            <div style="border: 2px solid #4B7DFF; border-radius: 5px; padding: 5px; display: inline-block;">
+            <div style="border: 2px solid #FF4B4B; border-radius: 5px; padding: 5px; display: inline-block;">
                 <img src="{image_url}" style="display: block; width: 100%; border-radius: 5px;" />
             </div>
             """,
             unsafe_allow_html=True
         )
-        with st.expander("More Info"):
+        with st.expander("More Info", expanded=True):
             st.write("**Description:** An interactive web application for designing and visualizing Convolutional Neural Network architectures.")
             st.write("**Key Features:**")
             st.write("- Dynamic layer configuration")
@@ -442,7 +442,7 @@ elif page == "Projects":
         """,
         unsafe_allow_html=True
         )
-        with st.expander("More Info", expanded=True):
+        with st.expander("More Info"):
             st.write("**Description:** Created with K-Nearest Neighbors and TF-IDF to deliver the top 10 personalized movie picks.")
             st.write("**Key Features:**")
             st.write("- Personalized top 10 movie recommendations based on user preferences.")
