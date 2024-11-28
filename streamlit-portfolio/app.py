@@ -1,7 +1,6 @@
 import streamlit as st 
 from streamlit_timeline import timeline
 from streamlit_option_menu import option_menu
-import time
 
 ### METADATA
 st.set_page_config(
@@ -25,8 +24,8 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 page = option_menu(
         menu_title=None,
-        options=["About", "Projects", "Resume"],
-        icons = ["person", "bar-chart", "share"],
+        options=["About", "Projects"],
+        icons = ["person", "bar-chart"],
         menu_icon="cast",
         default_index=0,
         orientation="horizontal",
@@ -116,6 +115,30 @@ linkedin.markdown(
         </a>
     </div>
     """, 
+    unsafe_allow_html=True
+)
+resume_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/Resume.pdf"
+s1, resume, s2 = st.sidebar.columns([1, 3, 1])
+resume.markdown(
+    f"""
+    <div class="sidebar-button" style="text-align: center; margin-top: 15px;">
+        <a href="{resume_url}" target="_blank" class="button" style="
+            background-color: #FF4B4B; 
+            color: white; 
+            padding: 8px 15px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-size: 14px; 
+            font-weight: 600; 
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;">
+            <i class="fa-solid fa-file-pdf"></i> Download Resume
+        </a>
+    </div>
+    """,
     unsafe_allow_html=True
 )
 
@@ -449,137 +472,3 @@ elif page == "Projects":
             st.write("- Dataset of 8,000 Netflix movies and 75,000 TMDB movies.")
             st.write("**Technologies:** KNN, TF-IDF")
         st.link_button("Try Now", "https://cinem8.streamlit.app/")
-
-elif page == "Resume":
-    st.markdown("""
-    <style>
-    .right {
-        float: right;
-        color: #999;
-        font-weight: bold;
-    }
-    .section-header{
-        font-size: 24px;
-        font-weight: bold;
-        color: #FF4B4B;
-    }
-    .section-sub-header {
-        font-size: 18px;
-        font-weight: bold;
-        # color: #4B8BBE;
-        color: black;
-        margin-bottom: 10px;
-        border-bottom: 1px solid #4B8BBE;
-        padding-bottom: 5px;
-    }
-    .skills-header {
-        font-size: 18px;
-        font-weight: bold;
-        # color: #4B8BBE;
-        color: black;
-        margin-bottom: 10px;
-        border-bottom: 1px solid #4B8BBE;
-        padding-bottom: 5px;
-    }
-    .expander-header {
-        background-color: #f0f2f6;
-        padding: 10px;
-        border-radius: 5px;
-        margin-bottom: 10px;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-    st.write('')
-    c1, c2, c3 = st.columns([1, 25, 1])
-    # Education Section
-    with c2:
-        resume_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/Resume.pdf"
-        st.markdown(
-            f"""
-            <a href="{resume_url}" download>
-                <button style="width:100%; padding:10px; background-color:white; color:#FF4B4B; border:2px solid #FF4B4B; border-radius:5px; cursor:pointer; text-align:center;">Download Resume</button>
-            </a>
-            """,
-            unsafe_allow_html=True
-        )
-        st.write("---")
-        st.markdown('<div class="section-header">Education</div>', unsafe_allow_html=True)
-        with st.expander("Show/Hide", expanded=True):
-            st.markdown('<div class="section-sub-header">Saraswati College Of Engineering</div>', unsafe_allow_html=True)
-            st.write("Bachelor of Engineering in Computer Science And Engineering (AIML) with **8.64 CGPA**")
-            st.markdown('<div class="right">Navi Mumbai, India | 2021 – 2025</div>', unsafe_allow_html=True)
-
-            st.markdown('<div class="section-sub-header">Anjuman-E-Islam Janjira Jr. College of Science and Arts</div>', unsafe_allow_html=True)
-            st.write("Class XII with **92.50%**")
-            st.markdown('<div class="right">Murud, Maharashtra | 2019 – 2021</div>', unsafe_allow_html=True)
-
-        # Skills Section with Progress Bars
-        st.markdown('<div class="section-header">Skills</div>', unsafe_allow_html=True)
-        with st.expander("Show/Hide", expanded=True):
-            st.markdown('<div class="skills-header">Programming Languages</div>', unsafe_allow_html=True)
-            st.write("Python, SQL")
-
-            st.markdown('<div class="skills-header">Libraries / Frameworks</div>', unsafe_allow_html=True)
-            st.write("TensorFlow, Keras, Scikit-Learn, NumPy, Pandas, Streamlit")
-
-            st.markdown('<div class="skills-header">Tools / Platforms</div>', unsafe_allow_html=True)
-            st.write("Jupyter Notebook, Google Colab, VS Code, Git, GitHub")
-
-            st.markdown('<div class="skills-header">Databases</div>', unsafe_allow_html=True)
-            st.write("MySQL")
-
-
-        # Projects Section with Icons and Better Formatting
-        st.markdown('<div class="section-header">Projects</div>', unsafe_allow_html=True)
-        with st.expander("Show/Hide", expanded=True):
-            st.markdown('<div class="section-sub-header">ProctorVision: AI-driven Proctored Exam System</div>', unsafe_allow_html=True)
-            st.write("""
-            - A comprehensive system for proctored exams, utilizing advanced AI technologies for real-time monitoring.
-            - **Implemented YOLOv8** for background monitoring to detect unauthorized individuals, significantly reducing cheating incidents.
-            - Deployed **OpenCV** and **MediaPipe** for eye gaze tracking and head movement detection.
-            - **Technologies:** YOLOv8, OpenCV, MediaPipe.
-            """)
-            
-            st.markdown('<div class="section-sub-header">TinyVGG: Image Classification Model Inspired by VGG16</div>', unsafe_allow_html=True)
-            st.write("""
-            - An optimized image classification model based on the **VGG16 architecture**, designed for efficiency.
-            - Trained the model on the **CIFAR-10 dataset**, achieving a classification accuracy of **92%** with a model size of **4MB**.
-            - **Technologies:** TensorFlow, Keras, CNN.
-            """)
-
-            st.markdown('<div class="section-sub-header">CineMate: Movie Recommendation System</div>', unsafe_allow_html=True)
-            st.write("""
-            - Created with **K-Nearest Neighbors** and **TF-IDF** to deliver the **top 10 personalized** movie picks.
-            - Includes **8,000 top Netflix movies** and **75,000 top TMDB movies**.
-            - **Technologies:** KNN, TF-IDF.
-            """)
-            
-            st.markdown('<div class="section-sub-header">MoodMap: Sentiment Analysis Tool</div>', unsafe_allow_html=True)
-            st.write("""
-            - **Logistic Regression** and **TF-IDF** vectorization used for sentiment categorization.
-            - Analyzed over **50,000 movie reviews**, achieving **90% accuracy**.
-            """)
-
-        # Experience Section with Date Formatting
-        st.markdown('<div class="section-header">Experience</div>', unsafe_allow_html=True)
-        with st.expander("Show/Hide", expanded=True):
-            st.markdown('<div class="section-sub-header">Quasar 2.0 Hackathon - 1st Prize Winner</div>', unsafe_allow_html=True)
-            st.write("""
-            - Developed AI-driven Proctored Exam System using **YOLOv8** for unauthorized person detection, with **OpenCV** and **MediaPipe** for eye gaze and head tracking.
-            """)
-            st.markdown('<div class="right">March 2024</div>', unsafe_allow_html=True)
-
-            st.markdown('<div class="section-sub-header">NASA Space App Challenge</div>', unsafe_allow_html=True)
-            st.write("""
-            - Created an intelligent project collaboration system with a recommendation engine powered by machine learning.
-            """)
-            st.markdown('<div class="right">October 2023</div>', unsafe_allow_html=True)
-
-        # Certifications Section with Icons
-        st.markdown('<div class="section-header">Certifications</div>', unsafe_allow_html=True)
-        with st.expander("Show/Hide", expanded=True):
-            st.markdown('<div class="section-sub-header">Microsoft Azure AI-900 - Microsoft</div>', unsafe_allow_html=True)
-            st.write("Microsoft Certified: Azure AI Fundamentals")
-            st.markdown('<div class="right">March 2023</div>', unsafe_allow_html=True)
-
-        
