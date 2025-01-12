@@ -10,6 +10,21 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+custom_css = """
+<style>
+/* Set the main content to a fixed width and center it */
+div[data-testid="stAppViewContainer"] {
+    max-width: 1300px; /* Set your desired width */
+    margin: auto; /* Centers the container */
+    padding-top: 10px; /* Optional: Add space at the top */
+    padding-bottom: 10px; /* Optional: Add space at the bottom */
+    border-radius: 20px; /* Optional: Add rounded corners */
+}
+</style>
+"""
+
+st.markdown(custom_css, unsafe_allow_html=True)
+
 hide_streamlit_style = """
     <style>
     #MainMenu {visibility: hidden;} /* Hides the main menu */
