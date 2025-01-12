@@ -16,9 +16,12 @@ custom_css = """
 div[data-testid="stAppViewContainer"] {
     max-width: 1300px; /* Set your desired width */
     margin: auto; /* Centers the container */
-    padding-top: 10px; /* Optional: Add space at the top */
-    padding-bottom: 10px; /* Optional: Add space at the bottom */
-    border-radius: 20px; /* Optional: Add rounded corners */
+    margin-top: 5px; /* Optional: Add space at the top */
+    margin-bottom: 5px; /* Optional: Add space at the bottom */
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: inset 0px 2px 15px rgba(0, 0, 0, 0.15); /* Inner shadow */
 }
 </style>
 """
