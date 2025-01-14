@@ -25,18 +25,6 @@ div[data-testid="stAppViewContainer"] {
 }
 </style>
 """
-def apply_custom_style():
-    custom_css = """
-        <style>
-        .stApp {
-            background-color: #FFFFFF;
-        }
-        </style>
-    """
-    st.markdown(custom_css, unsafe_allow_html=True)
-
-# Use it at the start of your app
-apply_custom_style()
 
 st.markdown(custom_css, unsafe_allow_html=True)
 
