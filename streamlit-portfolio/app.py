@@ -31,12 +31,6 @@ def apply_custom_style():
         .stApp {
             background-color: #FFFFFF;
         }
-        
-        /* This affects buttons, sliders, and other primary-colored elements */
-        .stButton>button, .stSelectbox>div>div>div, 
-        .stSlider>div>div>div>div {
-            background-color: #FF4B4B !important;
-        }
         </style>
     """
     st.markdown(custom_css, unsafe_allow_html=True)
