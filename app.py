@@ -135,7 +135,7 @@ linkedin.markdown(
     """, 
     unsafe_allow_html=True
 )
-resume_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/Resume.pdf"
+resume_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/assets/Resume.pdf"
 s1, resume, s2 = st.sidebar.columns([1, 3, 1])
 resume.markdown(
     f"""
@@ -164,7 +164,7 @@ if page == "About":
     timeline_data =                 {
                         "title": {
                             "media": {
-                            "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/about-pic.jpg",
+                            "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/assets/images/about-pic.jpg",
                             "caption": ""
                             },
                             "text": {
@@ -197,7 +197,7 @@ if page == "About":
                         },
                         {
                             "media": {
-                                "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/scoe.jpg",
+                                "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/assets/images/scoe.jpg",
                                 "caption": ""
                             },
                             "start_date": {
@@ -225,7 +225,7 @@ if page == "About":
                         },
                         {
                         "media": {
-                            "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/azure-certificate.png",
+                            "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/assets/images/azure-certificate.png",
                             "caption": ""
                         },
                         "start_date": {
@@ -249,7 +249,7 @@ if page == "About":
                         },
                         {
                         "media": {
-                            "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/nasa.jpg",
+                            "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/assets/images/nasa.jpg",
                             "caption": ""
                         },
                         "start_date": {
@@ -263,7 +263,7 @@ if page == "About":
                     },
                         {
                             "media": {
-                                "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/quasar.jpg",
+                                "url": "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/assets/images/quasar.jpg",
                                 "caption": ""
                             },
                             "start_date": {
@@ -370,7 +370,7 @@ elif page == "Projects":
     with col1:
         st.subheader("TinyVGG")
         st.markdown("CNN Based Image Classification Model")
-        image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/tinyvgg.png"
+        image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/assets/images/tinyvgg.png"
         st.markdown(
             f"""
             <div style="border: 2px solid #FF4B4B; border-radius: 5px; padding: 5px; display: inline-block;">
@@ -391,7 +391,7 @@ elif page == "Projects":
     with col2:
         st.subheader("CNNCanvas")
         st.markdown("Dynamic Convolutional Neural Network Designer <small style='color:#FF6B6B; margin-left:10px; font-size:0.6em; background-color:#FFF3F3; padding:3px 6px; border-radius:4px;'>Ongoing</small>", unsafe_allow_html=True)
-        image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/cnncanvas.png"
+        image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/assets/images/cnncanvas.png"
         st.markdown(
             f"""
             <div style="border: 2px solid #FF4B4B; border-radius: 5px; padding: 5px; display: inline-block;">
@@ -414,7 +414,7 @@ elif page == "Projects":
     with col3:
         st.subheader("ProctorVision")
         st.markdown("AI-driven Proctored Exam System")
-        image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/proctorvision.png"
+        image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/assets/images/proctorvision.png"
         st.markdown(
             f"""
             <div style="border: 2px solid #FF4B4B; border-radius: 5px; padding: 5px; display: inline-block;">
@@ -434,7 +434,7 @@ elif page == "Projects":
     with col4:
         st.subheader("MoodMapper")
         st.markdown("Sentiment Analysis Tool")
-        image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/moodmapper.png"
+        image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/assets/images/moodmapper.png"
         st.markdown(
         f"""
         <div style="border: 2px solid #FF4B4B; border-radius: 5px; padding: 5px; display: inline-block;">
@@ -455,7 +455,7 @@ elif page == "Projects":
     with col5:
         st.subheader("AIML Practical Hub")
         st.markdown("A dedicated platform for BE AIML practicals.")
-        image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/practical-hub.png"
+        image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/assets/images/practical-hub.png"
         st.markdown(
             f"""
             <div style="border: 2px solid #FF4B4B; border-radius: 5px; padding: 5px; display: inline-block;">
@@ -474,7 +474,7 @@ elif page == "Projects":
     with col6:
         st.subheader("CineMate")
         st.markdown("Movie Recommendation System")
-        image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/streamlit-portfolio/assets/images/cinemate.png"
+        image_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/assets/images/cinemate.png"
         st.markdown(
         f"""
         <div style="border: 2px solid #FF4B4B; border-radius: 5px; padding: 5px; display: inline-block;">
