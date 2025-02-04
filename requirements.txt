@@ -41,7 +41,6 @@ streamlit-timeline==0.0.2
 streamlit_carousel==1.1.2
 tenacity==8.5.0
 toml==0.10.2
-tornado==6.4.1
 typing_extensions==4.12.2
 tzdata==2024.1
 urllib3==2.2.3
