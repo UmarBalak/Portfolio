@@ -68,6 +68,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 # st.sidebar.markdown("<br>", unsafe_allow_html=True)
 st.sidebar.markdown(
     """
@@ -79,7 +80,6 @@ st.sidebar.markdown(
         font-size: 46px;
         text-align: center;
         margin-bottom: 12px;
-        color: black; 
     }
     </style>
     
