@@ -50,115 +50,135 @@ page = option_menu(
     )
 
 ### SIDEBAR
-st.markdown(
-    """
-    <style>
-    /* Justify text for about me */
-    .justified-text {
-        text-align: justify;
-        margin: 0 15px; /* Adjust the margins for better readability */
-        color: #4d4d4d;
-    }
-    .sidebar-button {
-        margin: 20px 0 0 0;
-        display: flex;
-        justify-content: center;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+if 'chatbot' not in st.session_state:
+        st.session_state.chatbot = False
 
-# st.sidebar.markdown("<br>", unsafe_allow_html=True)
-st.sidebar.markdown(
-    """
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap'); /* Replace with the Whisper font link */
+with st.sidebar:
+        if st.session_state.chatbot:
+            st.sidebar.header("Still in training phase.")
+            gradio_space_url = "https://umarbalak-collabai.hf.space/"
 
-    .custom-font {
-        font-family: 'Whisper', sans-serif; 
-        font-size: 46px;
-        text-align: center;
-        margin-bottom: 12px;
-    }
-    </style>
-    
-    <div class="custom-font">
-        Umar A. Balak
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-st.sidebar.caption(
-    '''
-    <div class="justified-text">
-    Welcome to my digital playground! I’m a final-year B.Tech student specializing in AI and machine learning. With a strong foundation in Python and expertise in TensorFlow, Keras, and more, I excel at turning complex problems into innovative solutions. My journey includes working on a range of complex AI projects, from developing an AI-driven proctored exam system to creating efficient image classification models. Passionate about pushing technological boundaries and tackling real-world challenges, I am eager to continue exploring new possibilities in AI. Feel free to check out my projects and connect if you’re interested in collaborating or learning more!
-    </div>
-    ''',
-    unsafe_allow_html=True
-    )
+            # Embed the Gradio chatbot using an iframe
+            st.sidebar.markdown(
+                f'<iframe src="{gradio_space_url}" width="100%" height="770" frameborder="0"></iframe>',
+                unsafe_allow_html=True
+            )
+            # Toggle button at bottom of sidebar
+            if st.button("Close Chatbot", use_container_width=True):
+                st.session_state.chatbot = False
+        else:
+            st.markdown(
+                """
+                <style>
+                /* Justify text for about me */
+                .justified-text {
+                    text-align: justify;
+                    margin: 0 15px; /* Adjust the margins for better readability */
+                    color: #4d4d4d;
+                }
+                .sidebar-button {
+                    margin: 20px 0 0 0;
+                    display: flex;
+                    justify-content: center;
+                }
+                </style>
+                """,
+                unsafe_allow_html=True
+            )
 
-# Create 4 columns for the logos with reduced spacing
-c1, c2, gmail, github, linkedin, c4, c5= st.sidebar.columns(7)
-# Gmail button
-gmail.markdown(
-    """
-    <div class="sidebar-button">
-        <a href="mailto:umarbalak35@gmail.com" target="_blank" class="button">
-            <img src="https://lh3.googleusercontent.com/0rpHlrX8IG77awQMuUZpQ0zGWT7HRYtpncsuRnFo6V3c8Lh2hPjXnEuhDDd-OsLz1vua4ld2rlUYFAaBYk-rZCODmi2eJlwUEVsZgg" alt="Gmail" width="20" height="20">
-        </a>
-    </div>
-    """, 
-    unsafe_allow_html=True
-)
+            # st.sidebar.markdown("<br>", unsafe_allow_html=True)
+            st.sidebar.markdown(
+                """
+                <style>
+                @import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap'); /* Replace with the Whisper font link */
 
-# GitHub button
-github.markdown(
-    """
-    <div class="sidebar-button">
-        <a href="https://github.com/UmarBalak" target="_blank" class="button">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="20" height="20">
-        </a>
-    </div>
-    """, 
-    unsafe_allow_html=True
-)
+                .custom-font {
+                    font-family: 'Whisper', sans-serif; 
+                    font-size: 46px;
+                    text-align: center;
+                    margin-bottom: 12px;
+                }
+                </style>
+                
+                <div class="custom-font">
+                    Umar A. Balak
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+            st.sidebar.caption(
+                '''
+                <div class="justified-text">
+                Welcome to my digital playground! I’m a final-year B.Tech student specializing in AI and machine learning. With a strong foundation in Python and expertise in TensorFlow, Keras, and more, I excel at turning complex problems into innovative solutions. My journey includes working on a range of complex AI projects, from developing an AI-driven proctored exam system to creating efficient image classification models. Passionate about pushing technological boundaries and tackling real-world challenges, I am eager to continue exploring new possibilities in AI. Feel free to check out my projects and connect if you’re interested in collaborating or learning more!
+                </div>
+                ''',
+                unsafe_allow_html=True
+                )
 
-# LinkedIn button
-linkedin.markdown(
-    """
-    <div class="sidebar-button">
-        <a href="https://www.linkedin.com/in/umar-balak/" target="_blank" class="button">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn" width="20" height="20">
-        </a>
-    </div>
-    """, 
-    unsafe_allow_html=True
-)
-resume_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/assets/Resume.pdf"
-s1, resume, s2 = st.sidebar.columns([1, 3, 1])
-resume.markdown(
-    f"""
-    <div class="sidebar-button" style="text-align: center; margin-top: 15px;">
-        <a href="{resume_url}" target="_blank" class="button" style="
-            background-color: #FF4B4B; 
-            color: white; 
-            padding: 8px 15px; 
-            border: none; 
-            border-radius: 5px; 
-            cursor: pointer; 
-            font-size: 14px; 
-            font-weight: 600; 
-            text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease, transform 0.2s ease;">
-            <i class="fa-solid fa-file-pdf"></i> Download Resume
-        </a>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+            # Create 4 columns for the logos with reduced spacing
+            c1, c2, gmail, github, linkedin, c4, c5= st.sidebar.columns(7)
+            # Gmail button
+            gmail.markdown(
+                """
+                <div class="sidebar-button">
+                    <a href="mailto:umarbalak35@gmail.com" target="_blank" class="button">
+                        <img src="https://lh3.googleusercontent.com/0rpHlrX8IG77awQMuUZpQ0zGWT7HRYtpncsuRnFo6V3c8Lh2hPjXnEuhDDd-OsLz1vua4ld2rlUYFAaBYk-rZCODmi2eJlwUEVsZgg" alt="Gmail" width="20" height="20">
+                    </a>
+                </div>
+                """, 
+                unsafe_allow_html=True
+            )
+
+            # GitHub button
+            github.markdown(
+                """
+                <div class="sidebar-button">
+                    <a href="https://github.com/UmarBalak" target="_blank" class="button">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="20" height="20">
+                    </a>
+                </div>
+                """, 
+                unsafe_allow_html=True
+            )
+
+            # LinkedIn button
+            linkedin.markdown(
+                """
+                <div class="sidebar-button">
+                    <a href="https://www.linkedin.com/in/umar-balak/" target="_blank" class="button">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn" width="20" height="20">
+                    </a>
+                </div>
+                """, 
+                unsafe_allow_html=True
+            )
+            resume_url = "https://raw.githubusercontent.com/UmarBalak/Portfolio/main/assets/Resume.pdf"
+            s1, resume, s2 = st.sidebar.columns([1, 3, 1])
+            resume.markdown(
+                f"""
+                <div class="sidebar-button" style="text-align: center; margin-top: 15px;">
+                    <a href="{resume_url}" target="_blank" class="button" style="
+                        background-color: #FF4B4B; 
+                        color: white; 
+                        padding: 8px 15px; 
+                        border: none; 
+                        border-radius: 5px; 
+                        cursor: pointer; 
+                        font-size: 14px; 
+                        font-weight: 600; 
+                        text-decoration: none;
+                        display: inline-block;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                        transition: background-color 0.3s ease, transform 0.2s ease;">
+                        <i class="fa-solid fa-file-pdf"></i> Download Resume
+                    </a>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+            st.sidebar.markdown("---")
+            if st.button("Open Chatbot", use_container_width=True):
+                st.session_state.chatbot = True
 
 if page == "About":
     timeline_data =                 {
